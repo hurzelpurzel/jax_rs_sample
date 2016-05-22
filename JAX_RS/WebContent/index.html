@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - A simple angularJS client</title>
+  
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 
+  <script src="js/application.js"></script>
+  
+<style type="text/css">
+table {
+border-style: solid;
+ border-width: 1px;
+ margin: 10px;
+}
+tr > *{
+border-style: solid;
+ border-width: 1px;
+ }
+thead{
+	text-align: center;
+
+	
+}
+</style>
+  
+</head>
+<body >
+  <div ng-app="angularExample" ng-controller="UserController"  ng-init="load()">
+   <table ng-model="users">
+  <thead>User Repository</thead>
+  <tbody>
+  <tr >
+  	  <th >Userid</th>
+      <th >Firstname</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <tr  ng-repeat="user in users">
+     <td >{{user.id}}</td>
+      <td >{{user.firstname}}</td>
+      <td >{{user.name}}</td>
+      <td >{{user.email}}</td>
+      <td ><button ng-click="deleteUser(user.id);" >loeschen</button></td>
+    </tr>
+    <tr  >
+    	<td>*</td>
+      <td ><input type="text" ng-model="usernew.firstname"/></td>
+      <td ><input type="text" ng-model="usernew.name"/></td>
+      <td ><input type="text" ng-model="usernew.email"/></td>
+      <td ><button ng-click="createUser();" >anlegen</button></td>
+    </tr>
+  </tbody>
+</table>
+  
+</div>
+</body>
+</html>

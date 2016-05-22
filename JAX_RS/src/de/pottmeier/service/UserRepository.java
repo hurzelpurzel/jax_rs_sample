@@ -42,8 +42,8 @@ public class UserRepository {
 
 	
 	public void init(){
-		this._create(new UserEntity("Pottmeier", "Ludger", "ludger.pottmeier@gmx.de"));
-		this._create(new UserEntity("Pottmeier", "Saskia", "saskia.pottmeier@gmail.com"));
+		this._create(new UserEntity("Pottmeier", "L", "l.pottmeier@gmx.de"));
+		this._create(new UserEntity("Pottmeier", "A", "a.pottmeier@gmail.com"));
 	}
 	
 	private int _create(UserEntity tmp) {
